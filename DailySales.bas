@@ -52,7 +52,7 @@ Sub PullDataColumn()
 Attribute PullDataColumn.VB_ProcData.VB_Invoke_Func = "n\n14"
 ' Cmd + Option + N
     
-    If Cells(6, ActiveCell.Column) <> Empty And Cells(6, ActiveCell.Column) <> "Sunday" Then
+    If Cells(6, ActiveCell.Column) <> Empty And Cells(6, ActiveCell.Column) <> "Sunday" And Cells(5, ActiveCell.Column) = Empty Then
     
         Cells(34, ActiveCell.Column).Select
         
@@ -68,17 +68,16 @@ Attribute PullDataColumn.VB_ProcData.VB_Invoke_Func = "n\n14"
             If Cells(32, ActiveCell.Column).Value < 0.05 And Cells(32, ActiveCell.Column).Value > -0.05 Then
                 If Cells(32, ActiveCell.Column).Value <> 0 Then
                     Cells(37, ActiveCell.Column).Formula = "=" & Cells(37, ActiveCell.Column).Value & "-" & Round(Cells(32, ActiveCell.Column).Value, 2)
-                Else
-                    Cells(37, ActiveCell.Column).Formula = "=" & Cells(37, ActiveCell.Column).Value
                 End If
             Else
+                    Cells(43, ActiveCell.Column).Formula = "=" & Cells(43, ActiveCell.Column).Value & "-" & Round(Cells(32, ActiveCell.Column).Value, 2)
             End If
             
             'End Here
             Cells(34, ActiveCell.Column + 1).Select
     
     'Handle Sundays'
-    ElseIf Cells(6, ActiveCell.Column) = "Sunday" Then
+    ElseIf Cells(6, ActiveCell.Column) = "Sunday" Or Cells(5, ActiveCell.Column) <> Empty Then
         Cells(34, ActiveCell.Column + 1).Select
     Else
         MsgBox "Not a valid area for this macro."
