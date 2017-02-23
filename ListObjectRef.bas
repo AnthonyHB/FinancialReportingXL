@@ -107,3 +107,16 @@ Do
 Loop
 
 End Sub
+Sub Deleter()
+Dim dsheet As Worksheet
+Dim rptsheet As Worksheet
+
+Set dsheet = ThisWorkbook.Sheets("dsheet")
+Set rptsheet = ThisWorkbook.Sheets("rptsheet")
+
+    With rptsheet.ListObjects("Table1")
+        If Not .DataBodyRange Is Nothing Then
+            .DataBodyRange.Delete
+        End If
+    End With
+End Sub
