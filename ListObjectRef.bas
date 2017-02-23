@@ -35,7 +35,6 @@ Set dsheet = ThisWorkbook.Sheets("dsheet")
 Set rptsheet = ThisWorkbook.Sheets("rptsheet")
 
 rptLR = rptsheet.ListObjects("Table1").TotalsRowRange.Row
-' rptsheet.Range("a2:b" & rptLR).ClearContents
 
 lastRow = dsheet.Cells(Rows.Count, 1).End(xlUp).Row
 
