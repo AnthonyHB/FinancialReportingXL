@@ -27,6 +27,7 @@ Next x
 MsgBox myMsg
 
 End Sub
+
 Sub myPrintableReport()
 Dim dsheet As Worksheet
 Dim rptsheet As Worksheet
