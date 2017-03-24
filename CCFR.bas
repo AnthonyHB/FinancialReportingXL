@@ -21,6 +21,8 @@ Dim myIB1 As Long
 myIB1 = InputBox("What month is this for? (1-12)", "Month", "1") + 0
 If myIB1 = Empty Then Exit Sub
 
+Application.ScreenUpdating = False
+
 Call DataTransfer4128(myIB1)
 Call DataTransfer4135(myIB1)
 Call DataTransfer4234(myIB1)
@@ -29,10 +31,10 @@ Call DataTransfer4338(myIB1)
 Call DataTransfer4350(myIB1)
 Call DataTransfer4369(myIB1)
 
+Application.ScreenUpdating = True
 End Sub
 
 Sub DataTransfer4128(myIB1 As Long)
-
 Dim cc4128 As Worksheet
 Dim fr4128 As Worksheet
 Dim data As Worksheet

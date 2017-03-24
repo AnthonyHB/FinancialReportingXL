@@ -42,10 +42,10 @@ Application.ScreenUpdating = False
     Range("A1").Select
     
 ' B/S, IS, and Total Formulas
-    Range("C4:C2073") = "=VLOOKUP(A:A,'Accounting:Books and records:Mieneke:Financial Statements:2017:January 2017:[1.31.2017 Financial Statements.xlsx]GL Account Classification'!$A:$B,2,FALSE)"
-    Range("I4:I2073") = "=SUM(IF(RC[-6]=""B/S"",RC[-4]:RC[-3]))"
-    Range("J4:J2073") = "=SUMIF(RC[-7],""IS"",RC[-4])"
-    Range("L4:L2073") = "=SUM(RC[-3]:RC[-1])"
+    Range("C4:C2074") = "=VLOOKUP(A:A,'Untitled:Users:AnthonyBenites:Desktop:February 2017:[2.28.2017 Financial Statements 3_20_17.xlsx]GL Account Classification'!$A:$B,2,FALSE)"
+    Range("I4:I2074") = "=SUM(IF(RC[-6]=""B/S"",RC[-5]:RC[-4]))"
+    Range("J4:J2074") = "=SUMIF(RC[-7],""IS"",RC[-6])"
+    Range("L4:L2074") = "=SUM(RC[-3]:RC[-1])"
     
 ' Retained Earnings
     'Loops through all cells, finds Retained Earnings, deletes B/S, adds formula to Col N
