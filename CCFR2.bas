@@ -48,9 +48,10 @@ For x = 2 To dataLR
 
                 z = z + 1
                 fr.ListObjects("FR_4128").ListRows.Add AlwaysInsert:=True
+            End If
         
         ' 4135
-        If Left(data.Cells(x, 1), 7) = "  4135-" Then ' (TK) Fix to populate all stores
+        ElseIf Left(data.Cells(x, 1), 7) = "  4135-" Then ' (TK) Fix to populate all stores
 
             If Right(data.Cells(x, 1), 9) = "1099.0000" Then   
                 ccLR = cc.ListObjects("CC_4135").TotalsRowRange.Row 
@@ -75,9 +76,10 @@ For x = 2 To dataLR
                 
                 z = z + 1
                 fr.ListObjects("FR_4135").ListRows.Add AlwaysInsert:=True
+            End If
 
         ' 4234
-        If Left(data.Cells(x, 1), 7) = "  4234-" Then ' (TK) Fix to populate all stores
+        ElseIf Left(data.Cells(x, 1), 7) = "  4234-" Then ' (TK) Fix to populate all stores
 
             If Right(data.Cells(x, 1), 9) = "1099.0000" Then   
                 ccLR = cc.ListObjects("CC_4234").TotalsRowRange.Row 
@@ -102,9 +104,10 @@ For x = 2 To dataLR
                 
                 z = z + 1
                 fr.ListObjects("FR_4234").ListRows.Add AlwaysInsert:=True
+            End If
 
         ' 4236
-        If Left(data.Cells(x, 1), 7) = "  4236-" Then ' (TK) Fix to populate all stores
+        ElseIf Left(data.Cells(x, 1), 7) = "  4236-" Then ' (TK) Fix to populate all stores
 
             If Right(data.Cells(x, 1), 9) = "1099.0000" Then   
                 ccLR = cc.ListObjects("CC_4236").TotalsRowRange.Row 
@@ -129,9 +132,10 @@ For x = 2 To dataLR
                 
                 z = z + 1
                 fr.ListObjects("FR_4236").ListRows.Add AlwaysInsert:=True
+            End If
 
         ' 4338
-        If Left(data.Cells(x, 1), 7) = "  4338-" Then ' (TK) Fix to populate all stores
+        ElseIf Left(data.Cells(x, 1), 7) = "  4338-" Then ' (TK) Fix to populate all stores
 
             If Right(data.Cells(x, 1), 9) = "1099.0000" Then   
                 ccLR = cc.ListObjects("CC_4338").TotalsRowRange.Row 
@@ -156,9 +160,10 @@ For x = 2 To dataLR
                 
                 z = z + 1
                 fr.ListObjects("FR_4338").ListRows.Add AlwaysInsert:=True
+            End If
 
         ' 4350
-        If Left(data.Cells(x, 1), 7) = "  4350-" Then ' (TK) Fix to populate all stores
+        ElseIf Left(data.Cells(x, 1), 7) = "  4350-" Then ' (TK) Fix to populate all stores
 
             If Right(data.Cells(x, 1), 9) = "1099.0000" Then   
                 ccLR = cc.ListObjects("CC_4350").TotalsRowRange.Row 
@@ -183,9 +188,10 @@ For x = 2 To dataLR
                 
                 z = z + 1
                 fr.ListObjects("FR_4350").ListRows.Add AlwaysInsert:=True
+            End If
 
         ' 4369
-        If Left(data.Cells(x, 1), 7) = "  4369-" Then ' (TK) Fix to populate all stores
+        ElseIf Left(data.Cells(x, 1), 7) = "  4369-" Then ' (TK) Fix to populate all stores
 
             If Right(data.Cells(x, 1), 9) = "1099.0000" Then   
                 ccLR = cc.ListObjects("CC_4369").TotalsRowRange.Row 
@@ -210,39 +216,13 @@ For x = 2 To dataLR
                 
                 z = z + 1
                 fr.ListObjects("FR_4369").ListRows.Add AlwaysInsert:=True
-
             End If
         End If
     End If
 Next x
 
-
 Application.ScreenUpdating = True
-
 cc.Visible = True
 cc.Select
 
-End Sub
-
-
-Sub Deleter()
-
-Dim cc As Worksheet
-Dim fr As Worksheet
-
-Set cc = ThisWorkbook.Sheets("CSA CC Detail")
-Set fr = ThisWorkbook.Sheets("CSA FR Detail")
-
-    With cc.ListObjects("CC_4128")
-        If Not .DataBodyRange Is Nothing Then
-            .DataBodyRange.Delete
-        End If
-    End With
-    
-    With fr.ListObjects("FR_4128")
-        If Not .DataBodyRange Is Nothing Then
-            .DataBodyRange.Delete
-        End If
-    End With
-    
 End Sub
