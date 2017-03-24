@@ -12,34 +12,20 @@ Set data = ThisWorkbook.Sheets("Data")
 Set cc = ThisWorkbook.Sheets("CSA CC Detail")
 Set fr = ThisWorkbook.Sheets("CSA FR Detail")
 
-dataLR = data.Cells(Rows.Count, 1).End(xlUp).Row
-cc4128LR = cc.ListObjects("CC_4128").TotalsRowRange.Row 
-cc4135LR = cc.ListObjects("CC_4135").TotalsRowRange.Row 
-cc4234LR = cc.ListObjects("CC_4234").TotalsRowRange.Row 
-cc4236LR = cc.ListObjects("CC_4236").TotalsRowRange.Row 
-cc4338LR = cc.ListObjects("CC_4338").TotalsRowRange.Row 
-cc4350LR = cc.ListObjects("CC_4350").TotalsRowRange.Row 
-cc4369LR = cc.ListObjects("CC_4369").TotalsRowRange.Row 
-fr4128LR = fr.ListObjects("FR_4128").TotalsRowRange.Row 
-fr4135LR = fr.ListObjects("FR_4135").TotalsRowRange.Row 
-fr4234LR = fr.ListObjects("FR_4234").TotalsRowRange.Row 
-fr4236LR = fr.ListObjects("FR_4236").TotalsRowRange.Row 
-fr4338LR = fr.ListObjects("FR_4338").TotalsRowRange.Row 
-fr4350LR = fr.ListObjects("FR_4350").TotalsRowRange.Row 
-fr4369LR = fr.ListObjects("FR_4369").TotalsRowRange.Row 
-
-
 myIB1 = InputBox("What month is this for? (1-12)", "Month", "1") + 0
 If myIB1 = Empty Then Exit Sub
-
 On Error Resume Next
 
 Application.ScreenUpdating = False
+dataLR = data.Cells(Rows.Count, 1).End(xlUp).Row
 
 ' 4128
+cc1 = cc.ListObjects("CC_4128").TotalsRowRange.Row 
+fr1 = fr.ListObjects("FR_4128").TotalsRowRange.Row 
+
 ' leaves 1 row before total row
-y = cc4128LR - 1 
-z = fr4128LR - 1
+y = cc1 - 1 
+z = fr1 - 1
 
 For x = 2 To dataLR
     If Left(data.Cells(x, 2), 2) = " " & myIB1 And Right(data.Cells(x, 2), 5) = "17   " Then ' (TK) Finds current month. Will not support multiple digit months
@@ -63,9 +49,12 @@ For x = 2 To dataLR
 Next x
 
 ' 4135
+cc2 = cc.ListObjects("CC_4135").TotalsRowRange.Row 
+fr2 = fr.ListObjects("FR_4135").TotalsRowRange.Row 
+
 ' leaves 1 row before total row
-y = cc4135LR - 1
-z = fr4135LR - 1
+y = cc2 - 1
+z = fr2 - 1
 
 For x = 2 To dataLR
     If Left(data.Cells(x, 2), 2) = " " & myIB1 And Right(data.Cells(x, 2), 5) = "17   " Then ' (TK) Finds current month. Will not support multiple digit months
@@ -89,9 +78,12 @@ For x = 2 To dataLR
 Next x
 
 ' 4234
+cc3 = cc.ListObjects("CC_4234").TotalsRowRange.Row 
+fr3 = fr.ListObjects("FR_4234").TotalsRowRange.Row 
+
 ' leaves 1 row before total row
-y = cc4234LR - 1
-z = fr4234LR - 1
+y = cc3 - 1
+z = fr3 - 1
 
 For x = 2 To dataLR
     If Left(data.Cells(x, 2), 2) = " " & myIB1 And Right(data.Cells(x, 2), 5) = "17   " Then ' (TK) Finds current month. Will not support multiple digit months
@@ -115,9 +107,12 @@ For x = 2 To dataLR
 Next x
 
 ' 4236
+cc4 = cc.ListObjects("CC_4236").TotalsRowRange.Row 
+fr4 = fr.ListObjects("FR_4236").TotalsRowRange.Row 
+
 ' leaves 1 row before total row
-y = cc4236LR - 1
-z = fr4236LR - 1
+y = cc4 - 1
+z = fr4 - 1
 
 For x = 2 To dataLR
     If Left(data.Cells(x, 2), 2) = " " & myIB1 And Right(data.Cells(x, 2), 5) = "17   " Then ' (TK) Finds current month. Will not support multiple digit months
@@ -141,9 +136,12 @@ For x = 2 To dataLR
 Next x
 
 ' 4338
+cc5 = cc.ListObjects("CC_4338").TotalsRowRange.Row 
+fr5 = fr.ListObjects("FR_4338").TotalsRowRange.Row 
+
 ' leaves 1 row before total row
-y = cc4338LR - 1
-z = fr4338LR - 1
+y = cc5 - 1
+z = fr5 - 1
 
 For x = 2 To dataLR
     If Left(data.Cells(x, 2), 2) = " " & myIB1 And Right(data.Cells(x, 2), 5) = "17   " Then ' (TK) Finds current month. Will not support multiple digit months
@@ -167,9 +165,12 @@ For x = 2 To dataLR
 Next x
 
 ' 4350
+cc6 = cc.ListObjects("CC_4350").TotalsRowRange.Row 
+fr6 = fr.ListObjects("FR_4350").TotalsRowRange.Row 
+
 ' leaves 1 row before total row
-y = cc4350LR - 1
-z = fr4350LR - 1
+y = cc6 - 1
+z = fr6 - 1
 
 For x = 2 To dataLR
     If Left(data.Cells(x, 2), 2) = " " & myIB1 And Right(data.Cells(x, 2), 5) = "17   " Then ' (TK) Finds current month. Will not support multiple digit months
@@ -193,9 +194,12 @@ For x = 2 To dataLR
 Next x
 
 ' 4369
+cc7 = cc.ListObjects("CC_4369").TotalsRowRange.Row 
+fr7 = fr.ListObjects("FR_4369").TotalsRowRange.Row 
+
 ' leaves 1 row before total row
-y = cc4369LR - 1
-z = fr4369LR - 1
+y = cc7 - 1
+z = fr7 - 1
 
 For x = 2 To dataLR
     If Left(data.Cells(x, 2), 2) = " " & myIB1 And Right(data.Cells(x, 2), 5) = "17   " Then ' (TK) Finds current month. Will not support multiple digit months
@@ -220,8 +224,8 @@ Next x
 
 Application.ScreenUpdating = True
 
-cc4128.Visible = True
-cc4128.Select
+cc.Visible = True
+cc.Select
 
 End Sub
 
