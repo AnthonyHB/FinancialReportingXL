@@ -6,7 +6,7 @@ Attribute DataTransfer.VB_ProcData.VB_Invoke_Func = "n\n14"
 Dim data As Worksheet
 Dim cc As Worksheet
 Dim fr As Worksheet
-Dim myIB1 as Long
+Dim myIB1 As Long
 
 Set data = ThisWorkbook.Sheets("Data")
 Set cc = ThisWorkbook.Sheets("CSA CC Detail")
@@ -25,9 +25,9 @@ For x = 2 To dataLR
         ' 4128
         If Left(data.Cells(x, 1), 7) = "  4128-" Then ' (TK) Fix to populate all stores
 
-            If Right(data.Cells(x, 1), 9) = "1099.0000" Then   
-                ccLR = cc.ListObjects("CC_4128").TotalsRowRange.Row 
-                y = ccR - 1      
+            If Right(data.Cells(x, 1), 9) = "1099.0000" Then
+                ccR = cc.ListObjects("CC_4128").TotalsRowRange.Row
+                y = ccR - 1
 
                 cc.Cells(y, 1) = data.Cells(x, 1) 'name
                 cc.Cells(y, 2) = data.Cells(x, 2) 'date
@@ -37,8 +37,8 @@ For x = 2 To dataLR
                 y = y + 1
                 cc.ListObjects("CC_4128").ListRows.Add AlwaysInsert:=True
 
-            ElseIf Right(data.Cells(x, 1), 9) = "1205.0000" Then 
-                frLR = fr.ListObjects("FR_4128").TotalsRowRange.Row 
+            ElseIf Right(data.Cells(x, 1), 9) = "1205.0000" Then
+                frR = fr.ListObjects("FR_4128").TotalsRowRange.Row
                 z = frR - 1
 
                 fr.Cells(z, 1) = data.Cells(x, 1) 'name
@@ -53,9 +53,9 @@ For x = 2 To dataLR
         ' 4135
         ElseIf Left(data.Cells(x, 1), 7) = "  4135-" Then ' (TK) Fix to populate all stores
 
-            If Right(data.Cells(x, 1), 9) = "1099.0000" Then   
-                ccLR = cc.ListObjects("CC_4135").TotalsRowRange.Row 
-                y = ccR - 1      
+            If Right(data.Cells(x, 1), 9) = "1099.0000" Then
+                ccR = cc.ListObjects("CC_4135").TotalsRowRange.Row
+                y = ccR - 1
 
                 cc.Cells(y, 1) = data.Cells(x, 1) 'name
                 cc.Cells(y, 2) = data.Cells(x, 2) 'date
@@ -65,8 +65,8 @@ For x = 2 To dataLR
                 y = y + 1
                 cc.ListObjects("CC_4135").ListRows.Add AlwaysInsert:=True
 
-            ElseIf Right(data.Cells(x, 1), 9) = "1205.0000" Then 
-                frLR = fr.ListObjects("FR_4135").TotalsRowRange.Row 
+            ElseIf Right(data.Cells(x, 1), 9) = "1205.0000" Then
+                frR = fr.ListObjects("FR_4135").TotalsRowRange.Row
                 z = frR - 1
 
                 fr.Cells(z, 1) = data.Cells(x, 1) 'name
@@ -81,9 +81,9 @@ For x = 2 To dataLR
         ' 4234
         ElseIf Left(data.Cells(x, 1), 7) = "  4234-" Then ' (TK) Fix to populate all stores
 
-            If Right(data.Cells(x, 1), 9) = "1099.0000" Then   
-                ccLR = cc.ListObjects("CC_4234").TotalsRowRange.Row 
-                y = ccR - 1      
+            If Right(data.Cells(x, 1), 9) = "1099.0000" Then
+                ccR = cc.ListObjects("CC_4234").TotalsRowRange.Row
+                y = ccR - 1
 
                 cc.Cells(y, 1) = data.Cells(x, 1) 'name
                 cc.Cells(y, 2) = data.Cells(x, 2) 'date
@@ -93,8 +93,8 @@ For x = 2 To dataLR
                 y = y + 1
                 cc.ListObjects("CC_4234").ListRows.Add AlwaysInsert:=True
 
-            ElseIf Right(data.Cells(x, 1), 9) = "1205.0000" Then 
-                frLR = fr.ListObjects("FR_4234").TotalsRowRange.Row 
+            ElseIf Right(data.Cells(x, 1), 9) = "1205.0000" Then
+                frR = fr.ListObjects("FR_4234").TotalsRowRange.Row
                 z = frR - 1
 
                 fr.Cells(z, 1) = data.Cells(x, 1) 'name
@@ -109,9 +109,9 @@ For x = 2 To dataLR
         ' 4236
         ElseIf Left(data.Cells(x, 1), 7) = "  4236-" Then ' (TK) Fix to populate all stores
 
-            If Right(data.Cells(x, 1), 9) = "1099.0000" Then   
-                ccLR = cc.ListObjects("CC_4236").TotalsRowRange.Row 
-                y = ccR - 1      
+            If Right(data.Cells(x, 1), 9) = "1099.0000" Then
+                ccR = cc.ListObjects("CC_4236").TotalsRowRange.Row
+                y = ccR - 1
 
                 cc.Cells(y, 1) = data.Cells(x, 1) 'name
                 cc.Cells(y, 2) = data.Cells(x, 2) 'date
@@ -121,8 +121,8 @@ For x = 2 To dataLR
                 y = y + 1
                 cc.ListObjects("CC_4236").ListRows.Add AlwaysInsert:=True
 
-            ElseIf Right(data.Cells(x, 1), 9) = "1205.0000" Then 
-                frLR = fr.ListObjects("FR_4236").TotalsRowRange.Row 
+            ElseIf Right(data.Cells(x, 1), 9) = "1205.0000" Then
+                frR = fr.ListObjects("FR_4236").TotalsRowRange.Row
                 z = frR - 1
 
                 fr.Cells(z, 1) = data.Cells(x, 1) 'name
@@ -137,9 +137,9 @@ For x = 2 To dataLR
         ' 4338
         ElseIf Left(data.Cells(x, 1), 7) = "  4338-" Then ' (TK) Fix to populate all stores
 
-            If Right(data.Cells(x, 1), 9) = "1099.0000" Then   
-                ccLR = cc.ListObjects("CC_4338").TotalsRowRange.Row 
-                y = ccR - 1      
+            If Right(data.Cells(x, 1), 9) = "1099.0000" Then
+                ccR = cc.ListObjects("CC_4338").TotalsRowRange.Row
+                y = ccR - 1
 
                 cc.Cells(y, 1) = data.Cells(x, 1) 'name
                 cc.Cells(y, 2) = data.Cells(x, 2) 'date
@@ -149,8 +149,8 @@ For x = 2 To dataLR
                 y = y + 1
                 cc.ListObjects("CC_4338").ListRows.Add AlwaysInsert:=True
 
-            ElseIf Right(data.Cells(x, 1), 9) = "1205.0000" Then 
-                frLR = fr.ListObjects("FR_4338").TotalsRowRange.Row 
+            ElseIf Right(data.Cells(x, 1), 9) = "1205.0000" Then
+                frR = fr.ListObjects("FR_4338").TotalsRowRange.Row
                 z = frR - 1
 
                 fr.Cells(z, 1) = data.Cells(x, 1) 'name
@@ -165,9 +165,9 @@ For x = 2 To dataLR
         ' 4350
         ElseIf Left(data.Cells(x, 1), 7) = "  4350-" Then ' (TK) Fix to populate all stores
 
-            If Right(data.Cells(x, 1), 9) = "1099.0000" Then   
-                ccLR = cc.ListObjects("CC_4350").TotalsRowRange.Row 
-                y = ccR - 1      
+            If Right(data.Cells(x, 1), 9) = "1099.0000" Then
+                ccR = cc.ListObjects("CC_4350").TotalsRowRange.Row
+                y = ccR - 1
 
                 cc.Cells(y, 1) = data.Cells(x, 1) 'name
                 cc.Cells(y, 2) = data.Cells(x, 2) 'date
@@ -177,8 +177,8 @@ For x = 2 To dataLR
                 y = y + 1
                 cc.ListObjects("CC_4350").ListRows.Add AlwaysInsert:=True
 
-            ElseIf Right(data.Cells(x, 1), 9) = "1205.0000" Then 
-                frLR = fr.ListObjects("FR_4350").TotalsRowRange.Row 
+            ElseIf Right(data.Cells(x, 1), 9) = "1205.0000" Then
+                frR = fr.ListObjects("FR_4350").TotalsRowRange.Row
                 z = frR - 1
 
                 fr.Cells(z, 1) = data.Cells(x, 1) 'name
@@ -193,9 +193,9 @@ For x = 2 To dataLR
         ' 4369
         ElseIf Left(data.Cells(x, 1), 7) = "  4369-" Then ' (TK) Fix to populate all stores
 
-            If Right(data.Cells(x, 1), 9) = "1099.0000" Then   
-                ccLR = cc.ListObjects("CC_4369").TotalsRowRange.Row 
-                y = ccR - 1      
+            If Right(data.Cells(x, 1), 9) = "1099.0000" Then
+                ccR = cc.ListObjects("CC_4369").TotalsRowRange.Row
+                y = ccR - 1
 
                 cc.Cells(y, 1) = data.Cells(x, 1) 'name
                 cc.Cells(y, 2) = data.Cells(x, 2) 'date
@@ -205,8 +205,8 @@ For x = 2 To dataLR
                 y = y + 1
                 cc.ListObjects("CC_4369").ListRows.Add AlwaysInsert:=True
 
-            ElseIf Right(data.Cells(x, 1), 9) = "1205.0000" Then 
-                frLR = fr.ListObjects("FR_4369").TotalsRowRange.Row 
+            ElseIf Right(data.Cells(x, 1), 9) = "1205.0000" Then
+                frR = fr.ListObjects("FR_4369").TotalsRowRange.Row
                 z = frR - 1
 
                 fr.Cells(z, 1) = data.Cells(x, 1) 'name
